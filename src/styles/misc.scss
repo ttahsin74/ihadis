@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Kalpurush";
+  src: url("../fonts/kalpurush/kalpurush ANSI.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "me_quran";
+  src: url("../fonts/me_quran/me_quran Regular/me_quran Regular.ttf")
+    format("truetype");
+}
+
+.kalpurush-text {
+  font-family: "Kalpurush", sans-serif;
+}
+
+.Kalpurush-font,
+.Kalpurush-font-primary {
+  font-family: "Kalpurush", sans-serif;
+  font-weight: 400;
+  -webkit-text-stroke: 0.3px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Kalpurush-font-primary {
+  -webkit-text-stroke: 0.2px;
+}
+.me-quran-font {
+  font-family: "me_quran", sans-serif;
+}
+.drop-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  height: 50px;
+}
+.scroll-hover:hover::-webkit-scrollbar-thumb {
+  background: #cccfd2;
+}
+
+.font-select option {
+  padding: 4px;
+}
