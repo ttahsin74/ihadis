@@ -39,7 +39,7 @@ const TabList = () => {
               <img src={Cross} alt="" />
             </div>
           </div>
-          <div className="xl:border-b-[1px] border-y-[1px]  w-full flex items-center justify-center text-lg text-white border-b-[#ECEEF0] ">
+          <div className="xl:border-b-[1px] border-y-[1px] xl:border-y-[0px] w-full flex items-center justify-center text-lg text-white border-b-[#ECEEF0] ">
             <p
               className={`${
                 activeTab === 0 ? "text-white bg-[#2B9E76]" : "text-black"

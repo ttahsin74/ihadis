@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "../modules/Components/Home";
 // import Index from "../modules/home/index";
 import MainHome from "../modules/Components/MainHome";
@@ -23,6 +23,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />}>
           <Route path="/" element={<Content />}>
             <Route path="/" element={<MainContent />}>
+              <Route path="/" element={<Navigate to="/bukhari/1" replace />} />
               <Route path="/:bookName" element={<HadisOdday />}></Route>
               <Route
                 path="/:bookName/:chapterId"
