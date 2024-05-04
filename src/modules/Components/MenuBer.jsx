@@ -31,7 +31,7 @@ const MenuBer = () => {
         <div
           className={`lg:p-4 cursor-pointer p-2 w-9 lg:w-auto rounded-lg hover:bg-[#F8F8F9] group`}
           onClick={() => {
-            navigate("/home");
+            navigate("/bukhari");
           }}
         >
           <img className="group-hover:hidden" src={Home} alt="" />

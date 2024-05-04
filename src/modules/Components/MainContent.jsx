@@ -13,9 +13,9 @@ const MainContent = () => {
     setTablist(true);
     console.log("dgfd");
   };
-  // const handleCloseTab = () => {
-  //   setTablist(false);
-  // };
+  const handleCloseTab = () => {
+    setTablist(false);
+  };
 
   return (
     <div className="lg:rounded-tl-3xl bg-[#F2F4F6] w-full">

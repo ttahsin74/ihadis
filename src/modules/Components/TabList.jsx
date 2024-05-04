@@ -23,11 +23,11 @@ const TabList = () => {
   return (
     <div>
       <div
-        className={`xl:w-[350px] sm:w-7/12 w-full md:w-96 lg: xl:block xl:static absolute top-0 left-[-200%] duration-500 z-[200] ${
+        className={`xl:w-[350px] sm:w-7/12 w-full md:w-96 lg: xl:block xl:static fixed top-0 left-[-200%] duration-500 z-[200] ${
           tablist ? "left-[0%]" : "left-[-200%]"
         }`}
       >
-        <div className="rounded-2xl h-[calc(100vh_-_115px)] bg-white flex items-center flex-col">
+        <div className="rounded-2xl xl:h-[calc(100vh_-_115px)] h-screen bg-white flex items-center flex-col">
           <div className="flex items-center justify-between pb-6 pt-7 px-5 text-left w-full xl:hidden">
             <div className="text-xl kalpurush-text">ক্যাটাগরি</div>
             <div
@@ -39,7 +39,7 @@ const TabList = () => {
               <img src={Cross} alt="" />
             </div>
           </div>
-          <div className="lg:border-b-[1px] border-y-[1px] lg:border-y-0  w-full flex items-center justify-center text-lg text-white border-b-[#ECEEF0] ">
+          <div className="xl:border-b-[1px] border-y-[1px]  w-full flex items-center justify-center text-lg text-white border-b-[#ECEEF0] ">
             <p
               className={`${
                 activeTab === 0 ? "text-white bg-[#2B9E76]" : "text-black"
@@ -73,7 +73,13 @@ const TabList = () => {
                   hadis.length > 0 &&
                   hadis.map((val, ind) => {
                     return (
-                      <div key={ind} className="px-4">
+                      <div
+                        key={ind}
+                        className="px-4"
+                        onClick={() => {
+                          setTablist(false);
+                        }}
+                      >
                         <div className="mb-2 ">
                           <div
                             className={`${
@@ -84,7 +90,7 @@ const TabList = () => {
                             }}
                           >
                             <div className="flex items-center gap-4">
-                              <div className="h-12 w-12 sm:w-10 md:w-0 xl:w-10  flex items-center justify-center relative">
+                              <div className="h-12 w-12 sm:w-10 flex items-center justify-center relative">
                                 <div
                                   className={`${
                                     pathname.includes(val.link)
@@ -134,7 +140,13 @@ const TabList = () => {
                 <div className="mt-2">
                   {filteredBooks?.oddayName &&
                     filteredBooks.oddayName.map((val, ind) => (
-                      <div key={ind} className="px-4">
+                      <div
+                        key={ind}
+                        className="px-4"
+                        onClick={() => {
+                          setTablist(false);
+                        }}
+                      >
                         <div className="mb-2">
                           <div
                             className={`${
@@ -145,7 +157,7 @@ const TabList = () => {
                             }}
                           >
                             <div className="flex items-center gap-4">
-                              <div className="h-12 w-12   sm:w-10 md:w-0 xl:w-10  flex items-center justify-center relative">
+                              <div className="h-12 w-12 sm:w-10 flex items-center justify-center relative">
                                 <div
                                   className={`${
                                     pathname.includes(val.id)
