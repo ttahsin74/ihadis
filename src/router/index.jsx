@@ -8,6 +8,7 @@ import Content from "../modules/Components/Content";
 import MainContent from "../modules/Components/MainContent";
 import HadisContent from "../modules/Components/HadisContent";
 import HadisOdday from "../modules/Components/HadisOdday";
+import HomePage from "../modules/Components/HomePage";
 // import ChapterDetails from "../modules/Components/chapterDetails";
 
 // const HomePage = lazy(() => import("../modules/home"));
@@ -23,7 +24,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />}>
           <Route path="/" element={<Content />}>
             <Route path="/" element={<MainContent />}>
-              <Route path="/" element={<Navigate to="/bukhari/1" replace />} />
+              <Route path="/" element={<Books />} />
               <Route path="/:bookName" element={<HadisOdday />}></Route>
               <Route
                 path="/:bookName/:chapterId"
@@ -36,7 +37,7 @@ const AppRouter = () => {
             <Route path="/send" element={<MainContent />} />
           </Route>
         </Route>
-        <Route path="/home" element={<MainHome />} />
+        <Route path="/home-page" element={<HomePage />} />
         <Route path="/books" element={<Books />}></Route>
       </Routes>
     </Suspense>

@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../../assets/home.svg";
+import Home from "../../assets/home-copy.svg";
 import HomeHover from "../../assets/home-activefil.svg";
 import book from "../../assets/book.svg";
 import bookActive from "../../assets/book-active-focus.svg";
@@ -31,11 +31,11 @@ const MenuBer = () => {
         <div
           className={`lg:p-4 cursor-pointer p-2 w-9 lg:w-auto rounded-lg hover:bg-[#F8F8F9] group`}
           onClick={() => {
-            navigate("/bukhari");
+            navigate("/home-page");
           }}
         >
           <img className="group-hover:hidden" src={Home} alt="" />
-          <img className="hidden group-hover:block" src={HomeHover} alt="" />
+          <img className="group-hover:block hidden" src={HomeHover} alt="" />
         </div>
         <div
           className={`${
@@ -56,7 +56,7 @@ const MenuBer = () => {
             className="hidden group-hover:block"
             src={
               pathname === "/" || pathname === "/books"
-                ? bookActivefill
+                ? bookActive
                 : bookActive
             }
             alt=""

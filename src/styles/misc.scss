@@ -46,3 +46,21 @@
 .font-select option {
   padding: 4px;
 }
+.bg-img {
+  background-image: url(../assets/hero.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  .overlay {
+    
+    background: rgba(43, 158, 118, 0.9);
+  }
+}
+.embla {
+  overflow: hidden;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  gap: 50px;
+  min-width: 0;
+}
