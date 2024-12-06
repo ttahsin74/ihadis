@@ -8,9 +8,9 @@ const Books = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="lg:px-5 bg-[#F2F4F6] rounded-xl w-full h-[86.8vh] overflow-hidden overflow-y-scroll">
-      <div className="grid  grid-cols-[0,1fr,0] md:grid-cols-[10%,77.1%,10%] 2xl:grid-cols-[12%,1fr,12%] gap-6 ">
-        <div className="col-start-2 lg:mt-5 lg:pr-[7px] ">
+    <div className=" bg-[#F2F4F6] rounded-xl w-full h-[86.8vh] overflow-hidden overflow-y-scroll">
+      <div className="">
+        <div className="col-start-2 lg:mt-4 lg:pr-[7px] ">
           <div className=" mt-5 lg:mt-0 lg:flex justify-between items-center p-6 bg-white rounded-xl w-full">
             <h4 className="Kalpurush-font  text-2xl text-[#504f4f]  text-center lg:text-left">
               সকল বই
@@ -30,7 +30,7 @@ const Books = () => {
               </form>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-3 w-full mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-3 w-full mt-4">
             {hadisData &&
               hadisData.length > 0 &&
               hadisData.map((val, ind) => {

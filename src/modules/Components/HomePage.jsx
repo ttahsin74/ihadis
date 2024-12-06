@@ -3,7 +3,7 @@ import NavLogo from "../../assets/home-logo.png";
 import SupportLogo from "../../assets/helping-hand.svg";
 import Home from "../../assets/home.svg";
 import Banner from "./Banner";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HadisOdday from "./HadisOdday";
 import HadisContent from "./HadisContent";
 import Books from "./Books";
@@ -83,7 +83,7 @@ const HomePage = () => {
                   className="w-full lg:w-auto hover:bg-[#42424215] lg:hover:bg-[transparent] p-3 lg:p-0 rounded-lg lg:block flex items-center gap-4 whitespace-nowrap"
                 >
                   <img className="lg:hidden block" src={book} alt="" />
-                  <a href="">হাদিস গ্রন্থসমূহ</a>
+                  <Link to="/bukhari">হাদিস গ্রন্থসমূহ</Link>
                 </li>
                 <li
                   onClick={(e) => {
